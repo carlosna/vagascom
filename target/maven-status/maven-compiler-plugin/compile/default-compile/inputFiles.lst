@@ -23,6 +23,9 @@
 /home/pelezinho/Documents/workspace-spring-tool-suite-4-4.0.1.RELEASE/vagasapi/src/main/java/br/com/vagasapi/repositories/CandidaturaRepository.java
 /home/pelezinho/Documents/workspace-spring-tool-suite-4-4.0.1.RELEASE/vagasapi/src/main/java/br/com/vagasapi/repositories/PessoaRepository.java
 /home/pelezinho/Documents/workspace-spring-tool-suite-4-4.0.1.RELEASE/vagasapi/src/main/java/br/com/vagasapi/dto/PessoaDTOToPessoaConverter.java
+/home/pelezinho/Documents/workspace-spring-tool-suite-4-4.0.1.RELEASE/vagasapi/src/main/java/br/com/vagasapi/config/SwaggerConfig.java
 /home/pelezinho/Documents/workspace-spring-tool-suite-4-4.0.1.RELEASE/vagasapi/src/main/java/br/com/vagasapi/domain/Candidatura.java
+/home/pelezinho/Documents/workspace-spring-tool-suite-4-4.0.1.RELEASE/vagasapi/src/main/java/br/com/vagasapi/domain/Node.java
+/home/pelezinho/Documents/workspace-spring-tool-suite-4-4.0.1.RELEASE/vagasapi/src/main/java/br/com/vagasapi/domain/Graph.java
 /home/pelezinho/Documents/workspace-spring-tool-suite-4-4.0.1.RELEASE/vagasapi/src/main/java/br/com/vagasapi/config/MongoConfig.java
 /home/pelezinho/Documents/workspace-spring-tool-suite-4-4.0.1.RELEASE/vagasapi/src/main/java/br/com/vagasapi/domain/Counter.java

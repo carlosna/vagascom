@@ -1,7 +1,6 @@
 package br.com.vagasapi.services;
 
 import br.com.vagasapi.domain.Pessoa;
-import br.com.vagasapi.domain.Vaga;
 import br.com.vagasapi.dto.PessoaDTO;
 import br.com.vagasapi.dto.PessoaDTOToPessoaConverter;
 import br.com.vagasapi.repositories.PessoaRepository;

@@ -3,6 +3,7 @@ package br.com.vagasapi.controllers.br.com.vagasapi.controllers.impl;
 import br.com.vagasapi.controllers.PessoaController;
 import br.com.vagasapi.dto.PessoaDTO;
 import br.com.vagasapi.services.PessoaService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,6 +19,7 @@ public class PessoaControllerImpl {
     @Autowired
     PessoaService service;
 
+    @ApiOperation(value = "Cadastrar uma pessoa")
     @PostMapping
     public ResponseEntity<?> register(@Valid @RequestBody PessoaDTO pessoaDTO){
         Integer id = service.insert(pessoaDTO);

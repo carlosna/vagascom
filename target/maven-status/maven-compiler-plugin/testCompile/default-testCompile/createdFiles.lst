@@ -1,0 +1,3 @@
+br/com/vagasapi/test/domain/Edge.class
+br/com/vagasapi/test/CalculadorDeDistancia.class
+br/com/vagasapi/test/ShortestPathTest.class

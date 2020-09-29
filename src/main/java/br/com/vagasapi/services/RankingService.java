@@ -1,6 +1,8 @@
 package br.com.vagasapi.services;
 
 import br.com.vagasapi.domain.Candidatura;
+import br.com.vagasapi.domain.Graph;
+import br.com.vagasapi.domain.Node;
 import br.com.vagasapi.helpers.Dijkstra;
 import br.com.vagasapi.repositories.CandidaturaRepository;
 import br.com.vagasapi.repositories.VagaRepository;
@@ -23,7 +25,19 @@ public class RankingService {
     VagaRepository vagaRepository;
 
     private Integer calcularPontuacaoDistancia(String candidato, String vaga){
-        Integer shortestPath = algoritmo.getDistance(candidato, vaga);
+        //Integer shortestPath = algoritmo.getDistance(candidato, vaga);
+        Graph graph = new Graph();
+        Node source = new Node(candidato);
+        graph.addNode(source);
+
+        Node dest = new Node(vaga);
+
+        graph = Dijkstra.calculateShortestPathFromSource(graph, dest);
+        Integer shortestPath = graph.getNodes().
+                stream().
+                mapToInt(n -> n.getDistance()).
+                findFirst().
+                getAsInt();
 
         if(shortestPath > 20) return 0;
         if(shortestPath > 15) return 25;

@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vagas-api-deployment
+  labels:
+    app: vagas-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: vagas-api
+  template:
+    metadata:
+      labels:
+        app: vagas-api
+    spec:
+      containers:
+        - name: vagas-api
+          image: carlosna/vagasapi
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MONGO_HOST
+              value: mongo
+            - name: MONGO_PORT
+              value: "27017"
+            - name: MONGO_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name: mongodb
+                  key: database-name
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vagas-service
+  labels:
+    app: vagas-service
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+  selector:
+    app: vagas-api

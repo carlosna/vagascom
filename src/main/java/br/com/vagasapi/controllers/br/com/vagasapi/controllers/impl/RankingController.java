@@ -21,7 +21,7 @@ public class RankingController {
 
     @RequestMapping(value = "/vagas/{vagaid}/candidaturas/ranking", method = RequestMethod.GET)
     public ResponseEntity<List<Candidatura>> ranking(@PathVariable Integer vagaid){
-        System.out.println(vagaid);
+
         List<Candidatura> candidaturaList = rankingService.findCandidaturas(vagaid);
 
         return ResponseEntity.ok().body(candidaturaList);

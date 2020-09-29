@@ -1,13 +1,12 @@
 package br.com.vagasapi.controllers.br.com.vagasapi.controllers.impl;
 
 import br.com.vagasapi.controllers.VagaController;
-import br.com.vagasapi.domain.Candidatura;
 import br.com.vagasapi.domain.Vaga;
 import br.com.vagasapi.dto.VagaDTO;
 import br.com.vagasapi.services.VagaService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -27,6 +26,7 @@ public class VagaControllerImpl {
     @Autowired
     VagaService service;
 
+    @ApiOperation(value = "Cadastrar uma vaga")
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<?> create (@Valid @RequestBody VagaDTO vagaDTO){
         Integer id = service.insert(vagaDTO);

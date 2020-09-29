@@ -16,14 +16,15 @@
 
 FROM java:8-jre-alpine
 
-ARG JAR_FILE
+#ARG JAR_FILE
 
 RUN mkdir /var/app
 
-COPY ${JAR_FILE} /var/app/vagascom.jar
+COPY target/vagascom-0.0.1-SNAPSHOT.jar /var/app/vagascom.jar
 
 WORKDIR /var/app
 
 EXPOSE 8080
 
-CMD java -jar vagascom.jar
+#CMD java -jar vagascom.jar
+ENTRYPOINT ["java","-Dspring.data.mongodb.uri=mongodb://mongo/vagas", "-Djava.security.egd=file:/dev/./urandom","-jar","/var/app/vagascom.jar"]

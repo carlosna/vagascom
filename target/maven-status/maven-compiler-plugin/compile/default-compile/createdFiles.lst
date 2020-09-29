@@ -10,9 +10,12 @@ br/com/vagasapi/dto/PessoaDTOToPessoaConverter.class
 br/com/vagasapi/config/MongoConfig.class
 br/com/vagasapi/domain/Candidatura.class
 br/com/vagasapi/repositories/PessoaRepository.class
+br/com/vagasapi/config/SwaggerConfig.class
 br/com/vagasapi/controllers/CandidaturaController.class
+br/com/vagasapi/domain/Node.class
 br/com/vagasapi/services/VagaService.class
 br/com/vagasapi/services/CounterService.class
+br/com/vagasapi/domain/Graph.class
 br/com/vagasapi/domain/Pessoa.class
 br/com/vagasapi/controllers/br/com/vagasapi/controllers/impl/PessoaControllerImpl.class
 br/com/vagasapi/VagasAPISpringBoot.class

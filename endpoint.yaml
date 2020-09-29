@@ -1,0 +1,9 @@
+kind: Endpoints
+apiVersion: v1
+metadata:
+  name: mongo
+subsets: 
+- addresses:
+  - ip: 10.10.1.1
+  ports:
+  - port: 27017

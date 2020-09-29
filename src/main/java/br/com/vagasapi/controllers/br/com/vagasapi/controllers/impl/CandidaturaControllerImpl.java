@@ -7,6 +7,7 @@ import br.com.vagasapi.services.CandidaturaService;
 import br.com.vagasapi.services.PessoaService;
 import br.com.vagasapi.services.RankingService;
 import br.com.vagasapi.services.VagaService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -33,6 +34,7 @@ public class CandidaturaControllerImpl {
         @Autowired
         CandidaturaService candidaturaService;
 
+        @ApiOperation(value = "Cadastrar pessoa na vaga")
         @RequestMapping(method = RequestMethod.POST, consumes = { MediaType.APPLICATION_JSON_VALUE } )
         public ResponseEntity<Void> cadastrar(@RequestBody Map<String, Integer> json){
 
